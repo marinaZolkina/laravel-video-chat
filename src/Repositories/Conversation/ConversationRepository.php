@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace marinaZolkina\LaravelVideoChat\Repositories\Conversation;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
