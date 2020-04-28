@@ -125,6 +125,16 @@ class ConversationRepository extends BaseRepository
      */
     public function startConversationWith($firstUserId, $secondUserId)
     {
+        if ($firstUserId == $secondUserId){
+            return json_encode("Chat is impossible to create!");
+        }
+
+        $query = $this->query()->where('first_user_id', '=', $firstUserId)
+                            ->where('second_user_id', '=', $secondUserId);
+        if (!empty($query) || $query != NULL){
+            return json_encode("Chat already exist!");
+        }
+
         $created = $this->query()->create([
             'first_user_id'  => $firstUserId,
             'second_user_id' => $secondUserId,
