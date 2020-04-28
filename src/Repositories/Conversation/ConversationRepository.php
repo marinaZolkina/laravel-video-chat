@@ -10,6 +10,7 @@ use marinaZolkina\LaravelVideoChat\Models\Conversation\Conversation;
 use marinaZolkina\LaravelVideoChat\Repositories\BaseRepository;
 use marinaZolkina\LaravelVideoChat\Services\UploadManager;
 
+
 class ConversationRepository extends BaseRepository
 {
     /**
